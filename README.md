@@ -21,7 +21,7 @@ The URL structure is `/:url/:width/:height.:extension?`. The `:url` parameter mu
 
     convert input.jpg -thumbnail 240x80^> -gravity center -extent 240x80 output.jpg
 
-The `Cache-Control` header sets a `max-age` of one year.
+The `Cache-Control` header sets a `max-age` of one hour.
 
 ## Features
 
