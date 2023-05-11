@@ -23,7 +23,7 @@ var express = require('express')
     'image/jpg',
   ];
 
-app.get('/', function (req, res, next) {
+app.get('/api', function (req, res, next) {
   // /:url/:width/:height.:extension
 
   const reqURL = req.query['url'];
@@ -160,11 +160,11 @@ app.get('/', function (req, res, next) {
   retrieve(reqURL);
 });
 
-app.get('/api', (req, res) => {
-  res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-  res.end(`Hello!`);
-});
+// app.get('/api', (req, res) => {
+//   res.setHeader('Content-Type', 'text/html');
+//   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+//   res.end(`Hello!`);
+// });
 
 // app.listen(PORT, function () {
 //   console.log('Listening on', PORT);
